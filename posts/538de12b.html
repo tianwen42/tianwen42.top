@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>关于我 | 阳林的博客</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="关于我 | 阳林的博客">
+  <title>常用bat脚本 | 阳林的博客</title>
+  <meta name="keywords" content=" bat ">
+  <meta name="description" content="常用bat脚本 | 阳林的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="写点什么介绍">
 <meta property="og:type" content="website">
@@ -573,24 +573,31 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-bat脚本" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">关于我</h1>
+        <h1 class="article-title">常用bat脚本</h1>
     
     <div class="article-meta">
         
         
         
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">bat</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-02-16 23:13:31'>2022-02-16 22:56</time>
+            发布时间 : <time class="date" title='最后更新: 2022-02-16 23:17:18'>2021-04-09 20:36</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:6</span>
+        <span>字数:176</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -609,7 +616,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#code"><span class="toc-text">code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo%E9%85%8D%E7%BD%AE"><span class="toc-text">hexo配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python%E8%84%9A%E6%9C%AC"><span class="toc-text">python脚本</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -625,7 +632,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>写点什么介绍</p>
+        <p>bat脚本是个好东西，拿来就能用</p>
+<span id="more"></span>
+
+<h2 id="code"><a href="#code" class="headerlink" title="code"></a>code</h2><h3 id="hexo配置"><a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean <span class="token operator">&amp;&amp;</span> hexo g -d
+
+<span class="token builtin class-name">cd</span>
+@echo off
+<span class="token keyword">for</span> /f <span class="token string">"tokens=2 delims=="</span> %%a <span class="token keyword">in</span> <span class="token punctuation">(</span><span class="token string">'wmic path win32_operatingsystem get LocalDateTime /value'</span><span class="token punctuation">)</span> <span class="token keyword">do</span> <span class="token punctuation">(</span>
+  <span class="token builtin class-name">set</span> <span class="token assign-left variable">t</span><span class="token operator">=</span>%%a
+<span class="token punctuation">)</span>
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">Today</span><span class="token operator">=</span>%t:~0,4%-%t:~4,2%-%t:~6,2%
+echo,%Today%
+
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span> <span class="token operator">&amp;&amp;</span> <span class="token function">git</span> commit -m %Today% <span class="token operator">&amp;&amp;</span> <span class="token function">git</span> push origin hexog
+pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<hr>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">@echo off　　　　　　　　　　　<span class="token comment">#不显示后续命令行及当前命令行</span>
+<span class="token function">dir</span> c:<span class="token punctuation">\</span>*.* <span class="token operator">></span>a.txt　　　　　　	<span class="token comment">#将c盘文件列表写入a.txt</span>
+call c:<span class="token punctuation">\</span>ucdos<span class="token punctuation">\</span>ucdos.bat　　　 <span class="token comment">#调用ucdos</span>
+<span class="token builtin class-name">echo</span> 你好 　　　　　　　　　　  <span class="token comment">#显示"你好"</span>
+pause 　　　　　　　　　　　　  <span class="token comment">#暂停,等待按键继续</span>
+rem 准备运行wps 　　　　　　　  <span class="token comment">#注释：准备运行wps</span>
+<span class="token builtin class-name">cd</span> ucdos　　　　　　　　　　　  <span class="token comment">#进入ucdos目录</span>
+wps 　　　　　　　　　　　　　  <span class="token comment">#运行wps</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<hr>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">@echo off     <span class="token comment">#显示</span>
+@Rem Here is the description    <span class="token comment">#注释</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="python脚本"><a href="#python脚本" class="headerlink" title="python脚本"></a>python脚本</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#！/usr/bin/bash</span>
+
+<span class="token builtin class-name">cd</span> /root/脚本/birth
+
+/root/anaconda3/bin/python main.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yanglin2042@gmail.com </span>

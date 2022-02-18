@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>关于我 | 阳林的博客</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="关于我 | 阳林的博客">
+  <title>最短路径算法 | 阳林的博客</title>
+  <meta name="keywords" content=" 算法 , 最短路径 ">
+  <meta name="description" content="最短路径算法 | 阳林的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="写点什么介绍">
 <meta property="og:type" content="website">
@@ -573,24 +573,41 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-数据结构与算法/最短路径算法" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">关于我</h1>
+        <h1 class="article-title">最短路径算法</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="地理与计算机技术">地理与计算机技术</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">算法</a>
+            
+            <a class="color5">最短路径</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-02-16 23:13:31'>2022-02-16 22:56</time>
+            发布时间 : <time class="date" title='最后更新: 2022-01-22 12:23:50'>2021-04-24 20:49</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:6</span>
+        <span>字数:260</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -609,7 +626,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-dijistra"><span class="toc-text">1.dijistra</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-prim%E7%AE%97%E6%B3%95"><span class="toc-text">2.prim算法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Kruskal%E7%AE%97%E6%B3%95"><span class="toc-text">3.Kruskal算法</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -625,7 +642,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>写点什么介绍</p>
+        <p>最短路径算法</p>
+<span id="more"></span>
+<h1 id="1-dijistra"><a href="#1-dijistra" class="headerlink" title="1.dijistra"></a>1.dijistra</h1><p><img src="https://cdn.tianwen42.top/img/picgo/20210604151428.png" alt="这里写图片描述"></p>
+<p>邻接矩阵</p>
+<p><img src="https://cdn.tianwen42.top/img/picgo/20210604151620.png" alt="img"></p>
+<p>从v1开始找最小权重，如果权重和小于当前值，则置换，初始为<br>$$<br>dis\left[ \begin{matrix}<br>    \infty&amp;        \infty&amp;        \infty&amp;        \infty&amp;        \infty&amp;        \infty\<br>\end{matrix} \right]<br>$$<br>第一次：v1<br>$$<br>dis\left[ \begin{matrix}<br>    0&amp;        \infty&amp;        10&amp;        \infty&amp;        30&amp;        100\<br>\end{matrix} \right]<br>$$<br>第二次：v1-v3，距离v4最近（10+50）<br>$$<br>dis\left[ \begin{matrix}<br>    0&amp;        \infty&amp;        10&amp;        60&amp;        30&amp;        100\<br>\end{matrix} \right]<br>$$<br>第三次v1-v3-v4-,距离v6最近（10+50+10）<br>$$<br>dis\left[ \begin{matrix}<br>    0&amp;        \infty&amp;        10&amp;        60&amp;        30&amp;        70\<br>\end{matrix} \right]<br>$$<br>第四次：v1-v5，距离v4最近（30+20）<br>$$<br>dis\left[ \begin{matrix}<br>    0&amp;        \infty&amp;        10&amp;        50&amp;        30&amp;        70\<br>\end{matrix} \right]<br>$$<br>第五次：v1-v5-v4，距离v6最近（30+20+10）<br>$$<br>dis\left[ \begin{matrix}<br>    0&amp;        \infty&amp;        10&amp;        50&amp;        30&amp;        60\<br>\end{matrix} \right]<br>$$</p>
+<p><img src="https://cdn.tianwen42.top/img/picgo/20210604151629.png" alt="这里写图片描述"></p>
+<h1 id="2-prim算法"><a href="#2-prim算法" class="headerlink" title="2.prim算法"></a>2.prim算法</h1><p>按权重从小到大分布散列，取小至大权路径</p>
+<p><img src="https://cdn.tianwen42.top/img/picgo/20210604151637.png" alt="这里写图片描述"></p>
+<h1 id="3-Kruskal算法"><a href="#3-Kruskal算法" class="headerlink" title="3.Kruskal算法"></a>3.Kruskal算法</h1><p>按最小权重取探索，如果访问过的节点则回退走另一条路径，直至连通所有节点</p>
+<p><img src="https://cdn.tianwen42.top/img/picgo/20210604151641.png" alt="这里写图片描述"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yanglin2042@gmail.com </span>

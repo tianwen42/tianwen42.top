@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>关于我 | 阳林的博客</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="关于我 | 阳林的博客">
+  <title>模拟退火算法 | 阳林的博客</title>
+  <meta name="keywords" content=" matlab ">
+  <meta name="description" content="模拟退火算法 | 阳林的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="写点什么介绍">
 <meta property="og:type" content="website">
@@ -573,24 +573,39 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-模拟退火算法" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">关于我</h1>
+        <h1 class="article-title">模拟退火算法</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="地理与计算机技术">地理与计算机技术</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">matlab</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-02-16 23:13:31'>2022-02-16 22:56</time>
+            发布时间 : <time class="date" title='最后更新: 2022-01-27 12:16:44'>2021-08-05 10:27</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:6</span>
+        <span>字数:328</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -609,7 +624,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-text">原理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%91%E5%B1%9E%E9%80%80%E7%81%AB%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text">金属退火的原理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B1%82%E4%B8%80%E4%B8%AA%E7%BB%99%E5%AE%9A%E5%87%BD%E6%95%B0%E7%9A%84%E6%9C%80%E5%80%BC"><span class="toc-text">求一个给定函数的最值</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%85%83-x2F-%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E4%BC%98%E5%8C%96"><span class="toc-text">一元&#x2F;多元函数优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%AC%E5%B1%B1%E6%B3%95%EF%BC%88%E8%B4%AA%E5%BF%83%EF%BC%89"><span class="toc-text">爬山法（贪心）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#TSP%EF%BC%88%E6%97%85%E8%A1%8C%E5%95%86%E9%97%AE%E9%A2%98%EF%BC%89"><span class="toc-text">TSP（旅行商问题）</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -625,8 +640,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>写点什么介绍</p>
-
+        <h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><h2 id="金属退火的原理"><a href="#金属退火的原理" class="headerlink" title="金属退火的原理"></a>金属退火的原理</h2><p>金属退火是将金属加热到一定温度，保持足够时间，然后以适宜速度冷却(通常是缓慢冷却，有时是控制冷却)的一种金属热处理工艺。模拟退火算法来源于固体退火原理，将固体加温至充分高，再让其徐徐冷却，加温时，固体内部粒子随温升变为无序状，内能增大，而徐徐冷却时粒子渐趋有序，在每个温度都达到平衡态，最后在常温时达到基态，内能减为最小。</p>
+<h1 id="求一个给定函数的最值"><a href="#求一个给定函数的最值" class="headerlink" title="求一个给定函数的最值"></a>求一个给定函数的最值</h1><blockquote>
+<p>蒙特卡洛模拟:生成多个解：[0.21,-31.13,314.2,……….]</p>
+<p>穷举法    [0,0.001,0.002……..]</p>
+</blockquote>
+<p>上述两种方法对于多变量最值（可行解太多）很难求解</p>
+<h2 id="一元-x2F-多元函数优化"><a href="#一元-x2F-多元函数优化" class="headerlink" title="一元&#x2F;多元函数优化"></a>一元&#x2F;多元函数优化</h2><p>一元函数：x &#x3D; [1,2]范围内 y &#x3D; sin(10<em>pi</em>x) &#x2F; x 的极值</p>
+<p><img src="http://cdn.tianwen42.top/img/picgo/20210807150229.png" alt="img"></p>
+<p>二元函数：在x,y都是[-5,5]范围内找z &#x3D; x.^2 + y.^2 - 10<em>cos(2</em>pi<em>x) - 10</em>cos(2<em>pi</em>y) + 20 的极值</p>
+<p><img src="http://cdn.tianwen42.top/img/picgo/20210807150233.png" alt="img"></p>
+<h2 id="爬山法（贪心）"><a href="#爬山法（贪心）" class="headerlink" title="爬山法（贪心）"></a>爬山法（贪心）</h2><blockquote>
+<p>是一种启发式算法</p>
+<p>思路：往最大值方向走，容易陷入局部最优值</p>
+<p>模拟退火有概率接受更差的解，可以跳出局部最优解</p>
+</blockquote>
+<p><img src="http://cdn.tianwen42.top/img/picgo/20210808145048.png" alt="img"></p>
+<h1 id="TSP（旅行商问题）"><a href="#TSP（旅行商问题）" class="headerlink" title="TSP（旅行商问题）"></a>TSP（旅行商问题）</h1>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yanglin2042@gmail.com </span>
     </div>
@@ -642,6 +672,46 @@
 
 
 
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
     
 
 
