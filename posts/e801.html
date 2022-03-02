@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>matlab实战 | 阳林的博客</title>
-  <meta name="keywords" content=" 算法 , matlab , 工程 , 分析方法 , 数值分析 ">
-  <meta name="description" content="matlab实战 | 阳林的博客">
+  <title>深入理解指针 | 阳林的博客</title>
+  <meta name="keywords" content=" 指针 ">
+  <meta name="description" content="深入理解指针 | 阳林的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人信息 阳林&#x2F;男&#x2F;2000 本科&#x2F;地理信息科学专业 技术博客：http:&#x2F;&#x2F;tianwen42.top&#x2F; Github：tianwen42 期望职位：C++开发工程师&#x2F;三维重建工程师 所在城市：南京  技能清单 语言：Python&#x2F;C++&#x2F;C 框架：Thinker&#x2F;Yaf&#x2F;Yii&#x2F;Lavarel&#x2F;">
 <meta property="og:type" content="website">
@@ -634,47 +634,31 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-地理与计算机/matlab实战" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-基础/深入理解指针" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">matlab实战</h1>
+        <h1 class="article-title">深入理解指针</h1>
     
     <div class="article-meta">
         
         
-        
-        <span class="book">
-            <i class="iconfont icon-category"></i>
-            
-            
-            <a  data-rel="地理与计算机">地理与计算机</a>
-            
-        </span>
         
         
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">算法</a>
-            
-            <a class="color2">matlab</a>
-            
-            <a class="color3">工程</a>
-            
-            <a class="color5">分析方法</a>
-            
-            <a class="color5">数值分析</a>
+            <a class="color3">指针</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-02-23 15:01:27'>2021-08-06 18:37</time>
+            发布时间 : <time class="date" title='最后更新: 2022-03-02 15:11:11'>2022-02-02 09:13</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:796</span>
+        <span>字数:73</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -693,7 +677,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB%E5%9E%8B"><span class="toc-text">核心类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87%E8%A7%84%E5%88%92%E7%B1%BB"><span class="toc-text">目标规划类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92"><span class="toc-text">线性规划</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E8%A7%84%E5%88%92"><span class="toc-text">整数规划</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E5%80%BC%E5%AE%9A%E7%95%8C%E6%B3%95"><span class="toc-text">分值定界法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9A%90%E6%9E%9A%E4%B8%BE%E6%B3%95"><span class="toc-text">隐枚举法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E6%B3%95"><span class="toc-text">蒙特卡罗法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92"><span class="toc-text">非线性规划</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92"><span class="toc-text">二次规划</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="toc-text">分析方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90%E6%B3%95"><span class="toc-text">方差分析法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E6%B3%95"><span class="toc-text">回归分析法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%82%E6%AC%A1%E5%88%86%E6%9E%90%E6%B3%95"><span class="toc-text">层次分析法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E5%88%AB%E5%88%86%E6%9E%90%E6%B3%95"><span class="toc-text">判别分析法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E7%B1%BB%E7%AE%97%E6%B3%95"><span class="toc-text">优化类算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%80%BC%E6%96%B9%E6%B3%95"><span class="toc-text">插值方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%8F%92%E5%80%BC"><span class="toc-text">拉格朗日多项式插值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%9B%E9%A1%BF%E6%8F%92%E5%80%BC"><span class="toc-text">牛顿插值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%AE%B5%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC"><span class="toc-text">分段线性插值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%89%BE%E7%B1%B3%E5%B0%94%E7%89%B9%E6%8F%92%E5%80%BC%E6%B3%95"><span class="toc-text">艾米尔特插值法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E6%9D%A1%E6%8F%92%E5%80%BC"><span class="toc-text">样条插值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E7%A8%8B%E5%BB%BA%E6%A8%A1"><span class="toc-text">方程建模</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BB%BA%E6%A8%A1"><span class="toc-text">微分方程建模</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E8%A7%A3%E6%B3%95"><span class="toc-text">常微分方程解法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%95%B0%E5%80%BC%E8%A7%A3%E6%B3%95"><span class="toc-text">偏微分方程数值解法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8B%E8%A7%A3%E6%B3%95"><span class="toc-text">差分方程解法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E7%B1%BB"><span class="toc-text">图像类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B"><span class="toc-text">时间序列模型</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E9%92%88"><span class="toc-text">指针</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -709,106 +693,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p align="center">
-<img src="https://cdn.tianwen42.top/img/picgo/matlab.jpg" alt="Meting" height="200">
-</p>
-
-<p>matlab实战，工程，数值分析，建模</p>
-<span id="more"></span>
-
-<h1 id="核心类型"><a href="#核心类型" class="headerlink" title="核心类型"></a>核心类型</h1><h2 id="目标规划类"><a href="#目标规划类" class="headerlink" title="目标规划类"></a>目标规划类</h2><h3 id="线性规划"><a href="#线性规划" class="headerlink" title="线性规划"></a>线性规划</h3><p><img src="http://cdn.tianwen42.top/img/picgo/20210828105037.png" alt="image-20210828105036841"></p>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210829150901.png" alt="image-20210829150901520"></p>
-<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">c<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">;</span><span class="token number">3</span><span class="token punctuation">;</span><span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">%系数</span>
-a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span> <span class="token number">5</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token number">1</span> <span class="token number">3</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">%不等式系数</span>
-b<span class="token operator">=</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">;</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-aeq<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span> <span class="token number">1</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">%等式系数</span>
-beq<span class="token operator">=</span><span class="token number">7</span><span class="token punctuation">;</span>
-x<span class="token operator">=</span><span class="token function">linprog</span><span class="token punctuation">(</span><span class="token operator">-</span>c<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>aeq<span class="token punctuation">,</span>beq<span class="token punctuation">,</span><span class="token function">zeros</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">%zeros下限为零</span>
-value<span class="token operator">=</span>c<span class="token operator">'</span><span class="token operator">*</span>x<span class="token punctuation">;</span>
-<span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token string">'x1=%.4f,x2=%.4f,x3=%.4f\nz:%.4f\n'</span><span class="token punctuation">,</span>x<span class="token punctuation">,</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h4 id="整数规划"><a href="#整数规划" class="headerlink" title="整数规划"></a>整数规划</h4><h5 id="分值定界法"><a href="#分值定界法" class="headerlink" title="分值定界法"></a>分值定界法</h5><p>e03，分割可行解空间</p>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210829152956.png" alt="image-20210829152956647"></p>
-<h5 id="隐枚举法"><a href="#隐枚举法" class="headerlink" title="隐枚举法"></a>隐枚举法</h5><p>e04</p>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210829154820.png" alt="image-20210829154820767"></p>
-<p>观察，先取一个解，如果小于这个解，就舍弃，改进下边界。</p>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210829154752.png" alt="image-20210829154752250"></p>
-<h5 id="蒙特卡罗法"><a href="#蒙特卡罗法" class="headerlink" title="蒙特卡罗法"></a>蒙特卡罗法</h5><p>e05，丢点，不解释</p>
-<h4 id="非线性规划"><a href="#非线性规划" class="headerlink" title="非线性规划"></a>非线性规划</h4><p>e06</p>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210829160915.png" alt="image-20210829160915137"></p>
-<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">options<span class="token operator">=</span><span class="token function">optimset</span><span class="token punctuation">(</span><span class="token string">'largescale'</span><span class="token punctuation">,</span><span class="token string">'off'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">[</span>x<span class="token punctuation">,</span>y<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">fmincon</span><span class="token punctuation">(</span><span class="token string">'fun1'</span><span class="token punctuation">,</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token function">zeros</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'fun2'</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token string">'x1=%.4f\nx2=%.4f\nx3=%.4f\ny=%.4f\n'</span><span class="token punctuation">,</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="二次规划"><a href="#二次规划" class="headerlink" title="二次规划"></a>二次规划</h5><p>e07</p>
-<p><strong>当目标函数为自变量x的二次函数，约束条件为全线性的</strong>，称为二次规划</p>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210829161720.png" alt="image-20210829161720488"></p>
-<table>
-<thead>
-<tr>
-<th><img src="http://cdn.tianwen42.top/img/picgo/20210830095323.png" alt="image-20210830095323013"></th>
-<th><img src="http://cdn.tianwen42.top/img/picgo/20210830100528.png" alt="image-20210830100528244" style="zoom: 33%;" /></th>
-</tr>
-</thead>
-</table>
-<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">h<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">;</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">%高次对角矩阵</span>
-f<span class="token operator">=</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">6</span><span class="token punctuation">;</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">%一次矩阵</span>
-a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">%ab线性约束</span>
-b<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">;</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">[</span>x<span class="token punctuation">,</span>value<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">quadprog</span><span class="token punctuation">(</span>h<span class="token punctuation">,</span>f<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token function">zeros</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token string">'x1=%.4f\nx2=%.4f\nz=%.4f\n'</span><span class="token punctuation">,</span>x<span class="token punctuation">,</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-x1<span class="token operator">=</span><span class="token number">0</span><span class="token operator">:</span><span class="token number">0.01</span><span class="token operator">:</span><span class="token number">3</span><span class="token punctuation">;</span>x2<span class="token operator">=</span>x1<span class="token punctuation">;</span>
-<span class="token punctuation">[</span>x1<span class="token punctuation">,</span>x2<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">meshgrid</span><span class="token punctuation">(</span>x1<span class="token punctuation">,</span>x2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-f<span class="token operator">=</span><span class="token number">2</span><span class="token operator">*</span>x1<span class="token operator">.^</span><span class="token number">2</span><span class="token operator">-</span><span class="token number">4</span><span class="token operator">*</span>x1<span class="token operator">.*</span>x2<span class="token operator">+</span><span class="token number">4</span><span class="token operator">*</span>x2<span class="token operator">.^</span><span class="token number">2</span><span class="token operator">-</span><span class="token number">6</span><span class="token operator">*</span>x1<span class="token operator">-</span><span class="token number">3</span><span class="token operator">*</span>x2<span class="token punctuation">;</span>
-<span class="token function">f</span><span class="token punctuation">(</span>x1<span class="token operator">+</span>x2<span class="token operator">&lt;=</span><span class="token number">3</span> <span class="token operator">&amp;</span> <span class="token number">4</span><span class="token operator">*</span>x1<span class="token operator">+</span>x2<span class="token operator">&lt;=</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">-</span><span class="token number">15</span><span class="token punctuation">;</span>
-<span class="token function">mesh</span><span class="token punctuation">(</span>x1<span class="token punctuation">,</span>x2<span class="token punctuation">,</span>f<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h2><h3 id="方差分析法"><a href="#方差分析法" class="headerlink" title="方差分析法"></a>方差分析法</h3><h3 id="回归分析法"><a href="#回归分析法" class="headerlink" title="回归分析法"></a>回归分析法</h3><h3 id="层次分析法"><a href="#层次分析法" class="headerlink" title="层次分析法"></a>层次分析法</h3><h3 id="判别分析法"><a href="#判别分析法" class="headerlink" title="判别分析法"></a>判别分析法</h3><h2 id="优化类算法"><a href="#优化类算法" class="headerlink" title="优化类算法"></a>优化类算法</h2><h2 id="插值方法"><a href="#插值方法" class="headerlink" title="插值方法"></a>插值方法</h2><h3 id="拉格朗日多项式插值"><a href="#拉格朗日多项式插值" class="headerlink" title="拉格朗日多项式插值"></a>拉格朗日多项式插值</h3><p>拉格朗日插值法可以找到一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%A4%9A%E9%A1%B9%E5%BC%8F/10660961">多项式</a>，其恰好在各个观测的点取到观测到的值，<strong>给一些点，得出的一条过点的拟合曲线</strong>，方法如下</p>
-<p>插值基函数</p>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210830170745.png" alt="image-20210830170745016"></p>
-<p>将每一个点的插值基函数相加，得到过所有点的函数</p>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210830170236.png" alt="image-20210830170236543"></p>
-<h3 id="牛顿插值"><a href="#牛顿插值" class="headerlink" title="牛顿插值"></a>牛顿插值</h3><p><img src="http://cdn.tianwen42.top/img/picgo/20210831115723.jpg" alt="newton"></p>
-<p>由高次牛顿插值可以推得泰勒公式</p>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210830181644.jpg" alt="Tyler"></p>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210830180447.png" alt="image-20210830180447277"></p>
-<p>因而便于递推运算，而且 Newton 插值的计算量小于 Lagrange 插值。</p>
-<h3 id="分段线性插值"><a href="#分段线性插值" class="headerlink" title="分段线性插值"></a>分段线性插值</h3><p><img src="http://cdn.tianwen42.top/img/picgo/20210831104513.png" alt="image-20210831104513420"></p>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210831105557.jpg" alt="linear"></p>
-<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">yl<span class="token operator">=</span><span class="token function">interp1</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span><span class="token number">2.3</span><span class="token punctuation">,</span><span class="token string">'linear'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">%'nearest' 最近项插值</span>
-<span class="token comment">%'linear' 线性插值</span>
-<span class="token comment">%'spline' 逐段 3 次样条插值</span>
-<span class="token comment">%'cubic' 保凹凸性 3 次插值</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="艾米尔特插值法"><a href="#艾米尔特插值法" class="headerlink" title="艾米尔特插值法"></a>艾米尔特插值法</h3><p>如果对插值函数，不仅要求它在节点处与函数同值，而且要求它与函数有相同的一阶、二阶甚至更高阶的导数值，这就是 Hermite 插值问题</p>
-<h3 id="样条插值"><a href="#样条插值" class="headerlink" title="样条插值"></a>样条插值</h3><h2 id="方程建模"><a href="#方程建模" class="headerlink" title="方程建模"></a>方程建模</h2><h3 id="微分方程建模"><a href="#微分方程建模" class="headerlink" title="微分方程建模"></a>微分方程建模</h3><p>人口增长模型，Malthus模型。</p>
-<p>模型假设：</p>
+        <h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><blockquote>
 <ol>
-<li>设x(t)表示t时刻的人口数，且x(t)连续可微。</li>
-<li>人口的增长率r是常数（增长率&#x3D;出生率-死亡率）</li>
-<li>人口的数量变化是封闭的</li>
+<li>普通指针</li>
+<li><a href="####%E6%8C%87%E5%90%91const%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8C%87%E9%92%88">指向 const 对象的指针</a></li>
+<li><a href="####%E6%8C%87%E5%90%91%E9%9D%9Econst%E5%AF%B9%E8%B1%A1%E7%9A%84const%E6%8C%87%E9%92%88">指向 非const 对象的 const 指针</a></li>
+<li><a href="####%E6%8C%87%E5%90%91const%E5%AF%B9%E8%B1%A1%E7%9A%84const%E6%8C%87%E9%92%88">指向 const 对象的 const 指针</a></li>
 </ol>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210831113207.png" alt="image-20210831113207052"></p>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210831113236.png" alt="image-20210831113236524"></p>
-<p>改进模型，改进的模型假设：</p>
-<ol>
-<li>设r(x)为x的线性函数， r(x)&#x3D;r-sx</li>
-<li>自然资源与环境条件所能容纳的最大人口数为xm，即当x&#x3D;xm时增长率r(xm)&#x3D;0</li>
-</ol>
-<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">xt<span class="token operator">=</span><span class="token function">dsolve</span><span class="token punctuation">(</span><span class="token string">'Dx=r*(1-x/xm)*x'</span><span class="token punctuation">,</span><span class="token string">'x(t0)=x0'</span><span class="token punctuation">,</span><span class="token string">'t'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">disp</span><span class="token punctuation">(</span>xt<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">-</span>xm<span class="token operator">/</span><span class="token punctuation">(</span><span class="token function">exp</span><span class="token punctuation">(</span>xm<span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x0 <span class="token operator">-</span> xm<span class="token punctuation">)</span><span class="token operator">/</span>x0<span class="token punctuation">)</span> <span class="token operator">+</span> r<span class="token operator">*</span>t0<span class="token punctuation">)</span><span class="token operator">/</span>xm <span class="token operator">-</span> <span class="token punctuation">(</span>r<span class="token operator">*</span>t<span class="token punctuation">)</span><span class="token operator">/</span>xm<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210831115238.jpg" alt="推导"></p>
-<h3 id="常微分方程解法"><a href="#常微分方程解法" class="headerlink" title="常微分方程解法"></a>常微分方程解法</h3><h3 id="偏微分方程数值解法"><a href="#偏微分方程数值解法" class="headerlink" title="偏微分方程数值解法"></a>偏微分方程数值解法</h3><h3 id="差分方程解法"><a href="#差分方程解法" class="headerlink" title="差分方程解法"></a>差分方程解法</h3><h2 id="图像类"><a href="#图像类" class="headerlink" title="图像类"></a>图像类</h2><h2 id="时间序列模型"><a href="#时间序列模型" class="headerlink" title="时间序列模型"></a>时间序列模型</h2><p>1.最小值优化</p>
-<p>2.多目标最小值优化</p>
-<p>3.方程求解器</p>
-<p>4.最小二乘（曲线拟合）求解器</p>
+</blockquote>
+<p>首先区分引用变量与指针的区别</p>
+<blockquote>
+<p>当创建一个变量时，通过变量名修改和指针修改的安全性不同</p>
+</blockquote>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yanglin2042@gmail.com </span>
@@ -825,46 +721,6 @@ f<span class="token operator">=</span><span class="token number">2</span><span c
 
 
 
-    
-        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-    "HTML-CSS": {
-        preferredFont: "TeX",
-        availableFonts: ["STIX","TeX"],
-        linebreaks: { automatic:true },
-        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
-    },
-    tex2jax: {
-        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
-        processEscapes: true,
-        ignoreClass: "tex2jax_ignore|dno",
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-        equationNumbers: { autoNumber: "AMS" },
-        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-        Macros: { href: "{}" }
-    },
-    messageStyle: "none"
-    });
-</script>
-<!-- 给MathJax元素添加has-jax class -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<!-- 通过连接CDN加载MathJax的js代码 -->
-<script type="text/javascript" async
-        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<input type="hidden" id="MathJax-js"
-        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
-</input>
     
 
 
