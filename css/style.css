@@ -1695,7 +1695,6 @@ div.img_max {
   width: 100%;
   z-index: 50;
   background: #fff;
-  border-radius: 10px;
   transition: opacity 0.5s;
 }
 img.img_max {
@@ -1703,11 +1702,9 @@ img.img_max {
   position: fixed;
   z-index: 51;
   transition: top 0.5s, left 0.5s, transform 0.5s, width 0.5s, height 0.5s;
-  border-radius: 10px;
 }
 img.pswp__img {
   cursor: zoom-out;
-  border-radius: 10px;
 }
 .mobile-menus-out {
   display: none;
