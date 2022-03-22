@@ -1380,6 +1380,7 @@
   margin: auto;
   cursor: zoom-in;
   padding: 1px;
+  border-radius: 15px;
 }
 #post .pjax article .img_alt {
   text-align: center;

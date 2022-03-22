@@ -712,13 +712,14 @@ function bind() {
     /*初始化 img*/
     if (img_resize !== 'photoSwipe') {
         content.find('img:not([data-ignore])').each(function () {
-            if (!$(this).parent().hasClass('div_img')) {
-                $(this).wrap("<div class='div_img'></div>");
-                var alt = this.alt;
-                if (alt) {
-                    $(this).after('<div class="img_alt"><span>' + alt + '</span></div>');
-                }
-            }
+            // 给图片加名字
+            // if (!$(this).parent().hasClass('div_img')) {
+            //     $(this).wrap("<div class='div_img'></div>");
+            //     var alt = this.alt;
+            //     if (alt) {
+            //         $(this).after('<div class="img_alt"><span>' + alt + '</span></div>');
+            //     }
+            // }
             if ($(window).width() > 426) {
                 $(this).on("click", function (e) {
                     var _that = $(this);
@@ -748,10 +749,22 @@ function bind() {
                     $(this).css("visibility", "hidden");
                     setTimeout(function () {
                         $("img.img_max").attr("style", "").css({
-                            "top": img_top,
-                            "left": img_left,
-                            "width": img_width,
-                            "height": img_height
+                            // "top": img_top,
+                            // "left": img_left,
+                            // "width": img_width,
+                            // "height": img_height
+                            "border-radius": "20px",
+                            "top": "0px",
+                            "left": "0px",
+                            "right": "0px",
+                            "bottom": "0px",
+                            "margin": "auto",
+                            "max-width": "90%",
+                            "max-height": "90%",
+                            "cursor": "zoom-out",
+                            "position": "absolute",
+                            "animation": "fade-small-large .3s both",
+                            "-webkit-animation": "fade-small-large .3s both"
                         });
                         $("div.img_max").css("opacity", "1");
                     }, 10);
@@ -766,7 +779,7 @@ function bind() {
                         setTimeout(function () {
                             _that.css("visibility", "visible");
                             $(".img_max").remove();
-                            $(".img_hidden").remove();
+                            // $(".img_hidden").remove();
                         }, 500);
                     })
                 })
