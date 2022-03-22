@@ -1225,6 +1225,7 @@
 }
 #post .pjax article .article-entry>p:nth-child(1) {
   margin-top: 20px;
+  text-align: center;
 }
 #post .pjax article .article-meta {
   font-size: 0.9em;
@@ -1695,16 +1696,19 @@ div.img_max {
   height: 100%;
   width: 100%;
   z-index: 50;
-  background: #fff;
   border-radius: 10px;
   transition: opacity 0.5s;
+  content: '';
+  position: absolute;
+  animation: fade-in 0.5s both;
+  -webkit-animation: fade-in 0.5s both;
+  background: rgba(0,0,0,0.5);
 }
 img.img_max {
   cursor: zoom-out;
   position: fixed;
   z-index: 51;
   transition: top 0.5s, left 0.5s, transform 0.5s, width 0.5s, height 0.5s;
-  border-radius: 10px;
 }
 img.pswp__img {
   cursor: zoom-out;

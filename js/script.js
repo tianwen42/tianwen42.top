@@ -753,6 +753,7 @@ function bind() {
                             // "left": img_left,
                             // "width": img_width,
                             // "height": img_height
+                            "box-shadow":" 0 5px 15px rgba(0, 0, 0, .5)",
                             "border-radius": "20px",
                             "top": "0px",
                             "left": "0px",
