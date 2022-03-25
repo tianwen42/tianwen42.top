@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>cass7.0使用 | 阳林的博客</title>
-  <meta name="keywords" content=" cass ">
-  <meta name="description" content="cass7.0使用 | 阳林的博客">
+  <title>力扣2022/03/25 | 阳林的博客</title>
+  <meta name="keywords" content=" 算法 , leetcode ">
+  <meta name="description" content="力扣2022/03/25 | 阳林的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人信息 阳林&#x2F;男&#x2F;2000 本科&#x2F;地理信息科学专业 技术博客：http:&#x2F;&#x2F;tianwen42.top&#x2F; Github：tianwen42 期望职位：C++开发工程师&#x2F;三维重建工程师 所在城市：南京  技能清单 语言：Python&#x2F;C++&#x2F;C 框架：Thinker&#x2F;Django&#x2F;Spring boot&#x2F;La">
 <meta property="og:type" content="website">
@@ -696,9 +696,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-地理与计算机/cass7-0使用" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-力扣2022-03-25" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">cass7.0使用</h1>
+        <h1 class="article-title">力扣2022/03/25</h1>
     
     <div class="article-meta">
         
@@ -708,7 +708,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="地理与计算机">地理与计算机</a>
+            <a  data-rel="数据结构与算法">数据结构与算法</a>
             
         </span>
         
@@ -716,19 +716,21 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">cass</a>
+            <a class="color3">算法</a>
+            
+            <a class="color4">leetcode</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-02-22 22:59:46'>2021-04-22 13:32</time>
+            发布时间 : <time class="date" title='最后更新: 2022-03-25 21:25:53'>2022-03-25 21:02</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:97</span>
+        <span>字数:235</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -758,7 +760,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC"><span class="toc-text">基本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E7%BB%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">测绘数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D"><span class="toc-text">配置文件介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E5%8A%9F%E8%83%BD"><span class="toc-text">编辑功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AB%98%E7%A8%8B%E7%82%B9"><span class="toc-text">高程点</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81"><span class="toc-text">解题代码</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -774,38 +776,55 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>空间数据采集课程，用到了cass7.0</p>
-<span id="more"></span>
+        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><ol start="217">
+<li>存在重复元素</li>
+</ol>
+<p>难度：简单</p>
+<p><code>nums</code></p>
+<p><strong>至少两次</strong></p>
+<p><code>true</code></p>
+<p><code>false</code></p>
+<p><strong>示例 1：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums &#x3D; [1,2,3,1]
+输出：true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><h3 id="测绘数据类型"><a href="#测绘数据类型" class="headerlink" title="测绘数据类型"></a>测绘数据类型</h3><blockquote>
-<p>  .shp(矢量文件)</p>
-<p>  .hdr</p>
-</blockquote>
-<blockquote>
-<p>  .tif（栅格）</p>
-<p>  .img</p>
-</blockquote>
-<blockquote>
-<p>  .csv（文本）</p>
-</blockquote>
-<blockquote>
-<p>  .dwg（cass数据）</p>
-<p>  .cad（cad数据）</p>
-<p>  .dat(元数据)</p>
-</blockquote>
-<p>cass主要应用于地形图测绘，</p>
-<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p>配置文件</p>
-<blockquote>
-<p>  D:\Program Files (x86)\Cass\SYSTEM\Acad.pgp</p>
-</blockquote>
-<p>EX, *EXTEND</p>
-<img src="https://cdn.tianwen42.top/img/picgo/image-20210422151023060.png" alt="image-20210422151023060" style="zoom:33%;" />
 
-<h3 id="配置文件介绍"><a href="#配置文件介绍" class="headerlink" title="配置文件介绍"></a>配置文件介绍</h3><h3 id="编辑功能"><a href="#编辑功能" class="headerlink" title="编辑功能"></a>编辑功能</h3><blockquote>
-<p>  F8正交开关</p>
-<p>  F3对象追踪</p>
+<p><strong>示例 2：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums &#x3D; [1,2,3,4]
+输出：false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+<p><strong>示例 3：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums &#x3D; [1,1,1,3,3,4,3,2,4,2]
+输出：true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>1 &lt;&#x3D; nums.length &lt;&#x3D; 10<sup>5</sup></li>
+<li>-10<sup>9</sup> &lt;&#x3D; nums[i] &lt;&#x3D; 10<sup>9</sup></li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/contains-duplicate/">https://leetcode-cn.com/problems/contains-duplicate/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
 </blockquote>
-<h4 id="高程点"><a href="#高程点" class="headerlink" title="高程点"></a>高程点</h4><p><img src="https://cdn.tianwen42.top/img/picgo/image-20210422160143884.png" alt="image-20210422160143884"></p>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+
+public:
+    bool containsDuplicate(vector&lt;int&gt;&amp; nums) &#123;
+        sort(nums.begin(), nums.end());
+        while(nums.size()&gt;1&amp;&amp;(nums[nums.size()-1]!&#x3D;nums[nums.size()-2]))&#123;
+            &#x2F;&#x2F; 判断栈顶和倒二是否相等，注意边界条件
+            nums.pop_back();
+        &#125;
+        &#x2F;&#x2F; for(int i&#x3D;0; i&lt;nums.size();i++)&#123;
+        &#x2F;&#x2F;     cout &lt;&lt; nums[i] &lt;&lt; &quot; &quot;;
+        &#x2F;&#x2F; &#125;
+        if(nums.size()&#x3D;&#x3D;1) return false;else return true;
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yanglin2042@gmail.com </span>
