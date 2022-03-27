@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>深入理解C指针 | 阳林的博客</title>
-  <meta name="keywords" content=" 指针 ">
-  <meta name="description" content="深入理解C指针 | 阳林的博客">
+  <title>力扣2022/03/27 | 阳林的博客</title>
+  <meta name="keywords" content=" 算法 , leetcode ">
+  <meta name="description" content="力扣2022/03/27 | 阳林的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人信息 阳林&#x2F;男&#x2F;2000 本科&#x2F;地理信息科学专业 技术博客：http:&#x2F;&#x2F;tianwen42.top&#x2F; Github：tianwen42 期望职位：C++开发工程师&#x2F;三维重建工程师 所在城市：南京  技能清单 语言：Python&#x2F;C++&#x2F;C 框架：Thinker&#x2F;Django&#x2F;Spring boot&#x2F;La">
 <meta property="og:type" content="website">
@@ -684,9 +684,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-基础/深入理解C指针" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-力扣2022-03-27" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">深入理解C指针</h1>
+        <h1 class="article-title">力扣2022/03/27</h1>
     
     <div class="article-meta">
         
@@ -696,7 +696,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="基础">基础</a>
+            <a  data-rel="数据结构与算法">数据结构与算法</a>
             
         </span>
         
@@ -704,19 +704,21 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">指针</a>
+            <a class="color3">算法</a>
+            
+            <a class="color4">leetcode</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-03-08 23:22:26'>2022-02-02 09:13</time>
+            发布时间 : <time class="date" title='最后更新: 2022-03-27 20:27:39'>2022-03-27 20:25</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:145</span>
+        <span>字数:510</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -746,7 +748,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E9%92%88"><span class="toc-text">指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F"><span class="toc-text">内存泄漏</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE704-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-text">题目704.二分查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81"><span class="toc-text">解题代码</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -762,32 +764,75 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><blockquote>
-<ol>
-<li>普通指针</li>
-<li><a href="####%E6%8C%87%E5%90%91const%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8C%87%E9%92%88">指向 const 对象的指针</a></li>
-<li><a href="####%E6%8C%87%E5%90%91%E9%9D%9Econst%E5%AF%B9%E8%B1%A1%E7%9A%84const%E6%8C%87%E9%92%88">指向 非const 对象的 const 指针</a></li>
-<li><a href="####%E6%8C%87%E5%90%91const%E5%AF%B9%E8%B1%A1%E7%9A%84const%E6%8C%87%E9%92%88">指向 const 对象的 const 指针</a></li>
-</ol>
-</blockquote>
-<p>首先区分引用变量与指针的区别</p>
-<blockquote>
-<p>当创建一个变量时，通过变量名修改和指针修改的安全性不同</p>
-</blockquote>
-<p><img src="http://qiniu.tianwen42.top/picgo/image-20220303143051994.png" alt="image-20220303143051994"></p>
-<h3 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h3><p>tips</p>
-<ul>
-<li><p>创建内存后一定记得free, malloc,free成对出现</p>
-</li>
-<li><p>指针创建后记得要初始化</p>
-</li>
-</ul>
-<p>初始化静态或全局变量不能调用函数，如</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">static int *pi&#x3D;malloc(sizeof(int));  &#x2F;&#x2F;编译错误<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+        <h2 id="题目704-二分查找"><a href="#题目704-二分查找" class="headerlink" title="题目704.二分查找"></a>题目704.二分查找</h2><p>难度：简单</p>
+<p>给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
+<br>
+**示例 1:**
 
-<p>改为</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">static int *pi;
-pi &#x3D; malloc(sizeof(int));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">输入: nums &#x3D; [-1,0,3,5,9,12], target &#x3D; 9
+输出: 4
+解释: 9 出现在 nums 中并且下标为 4
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+<p><strong>示例 2:</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入: nums &#x3D; [-1,0,3,5,9,12], target &#x3D; 2
+输出: -1
+解释: 2 不存在 nums 中因此返回 -1
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+<p><strong>提示：</strong></p>
+<ol>
+<li>你可以假设 nums 中的所有元素是不重复的。</li>
+<li>n 将在 [1, 10000]之间。</li>
+<li>nums 的每个元素都将在 [-9999, 9999]之间。</li>
+</ol>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-search/">https://leetcode-cn.com/problems/binary-search/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<p>两种方法，注意边界条件和更新条件</p>
+</blockquote>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    &#x2F;&#x2F; 定义target在左闭右开的区间里，即：[left, right]
+    int search(vector&lt;int&gt; &amp;nums, int target) &#123;
+        int head &#x3D; 0;
+        int rear &#x3D; nums.size() - 1;
+        int mid;
+        while (head &lt;&#x3D; rear) &#123;
+            mid &#x3D; (head + rear) &#x2F; 2;
+            if (nums[mid] &#x3D;&#x3D; target)
+                return mid;
+            else if (nums[mid] &lt; target) &#123;
+                head &#x3D; mid + 1; &#x2F;&#x2F; 注意
+            &#125; else if (nums[mid] &gt; target) &#123;
+                rear &#x3D; mid - 1;
+            &#125;
+        &#125;
+        return 0;
+    &#125;
+
+    &#x2F;&#x2F; 定义target在左闭右开的区间里，即：[left, right)
+    int search2(vector&lt;int&gt;&amp; nums, int target) &#123;
+        int left &#x3D; 0;
+        int right &#x3D; nums.size(); &#x2F;&#x2F; 定义target在左闭右开的区间里，即：[left, right)
+        while (left &lt; right) &#123; &#x2F;&#x2F; 因为left &#x3D;&#x3D; right的时候，在[left, right)是无效的空间，所以使用 &lt;
+            int middle &#x3D; left + ((right - left) &gt;&gt; 1);
+            if (nums[middle] &gt; target) &#123;
+                right &#x3D; middle; &#x2F;&#x2F; target 在左区间，在[left, middle)中
+            &#125; else if (nums[middle] &lt; target) &#123;
+                left &#x3D; middle + 1; &#x2F;&#x2F; target 在右区间，在[middle + 1, right)中
+            &#125; else &#123; &#x2F;&#x2F; nums[middle] &#x3D;&#x3D; target
+                return middle; &#x2F;&#x2F; 数组中找到目标值，直接返回下标
+            &#125;
+        &#125;
+        &#x2F;&#x2F; 未找到目标值
+        return -1;
+    &#125;
+
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
       
