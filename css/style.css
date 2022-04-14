@@ -1573,9 +1573,13 @@
   color: #0269c8;
   word-break: break-all;
   border-bottom: 1px solid #d1e9ff;
+/*bandage大小*/
 }
 #post .copyright a:hover {
   text-decoration: underline;
+}
+#post .copyright a img {
+  height: 20px;
 }
 #post .article_copyright {
   padding: 5px 30px;
