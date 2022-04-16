@@ -6,7 +6,7 @@
   <link href="http://tiawnen42.top/atom.xml" rel="self"/>
   
   <link href="http://tiawnen42.top/"/>
-  <updated>2022-04-14T13:51:26.378Z</updated>
+  <updated>2022-04-16T16:17:09.698Z</updated>
   <id>http://tiawnen42.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣2022-04-16</title>
+    <link href="http://tiawnen42.top/posts/9857.html"/>
+    <id>http://tiawnen42.top/posts/9857.html</id>
+    <published>2022-04-16T15:44:03.000Z</published>
+    <updated>2022-04-16T16:17:09.698Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目-剑指-Offer-II-079-所有子集"><a href="#题目-剑指-Offer-II-079-所有子集" class="headerlink" title="题目.剑指 Offer II 079. 所有子集"></a>题目.剑指 Offer II 079. 所有子集</h2><p>难度：中等</p><p>给定一个整数数组 nums ，数组中的元素 <strong>互不相同</strong> 。返回该数组所有可能的子集（幂集）。</p><p>解集 <strong>不能</strong> 包含重复的子集。你可以按 <strong>任意顺序</strong> 返回解集。</p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：nums &#x3D; [1,2,3]输出：[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：nums &#x3D; [0]输出：[[],[0]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>1 &lt;&#x3D; nums.length &lt;&#x3D; 10</li><li>-10 &lt;&#x3D; nums[i] &lt;&#x3D; 10</li><li>nums 中的所有元素 <strong>互不相同</strong></li></ul><p>注意：本题与主站 78 题相同： <a href="https://leetcode-cn.com/problems/subsets/">https://leetcode-cn.com/problems/subsets/</a></p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/TVdhkn/">https://leetcode-cn.com/problems/TVdhkn/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>可以正常遍历，也可以用dfs</p></blockquote><h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public:    vector&lt;vector&lt;int&gt;&gt; subsets(vector&lt;int&gt;&amp; nums) &#123;        vector&lt;vector&lt;int&gt;&gt; res&#123;vector&lt;int&gt;()&#125;;        int i, j, len;        for (i&#x3D;0; i&lt;nums.size(); i++) &#123;            len &#x3D; res.size();            for (j&#x3D;0; j&lt;len; j++) &#123;                auto tmp &#x3D; res[j];                tmp.push_back(nums[i]);                res.push_back(tmp);            &#125;        &#125;        return res;    &#125;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题目-剑指-Offer-II-079-所有子集&quot;&gt;&lt;a href=&quot;#题目-剑指-Offer-II-079-所有子集&quot; class=&quot;headerlink&quot; title=&quot;题目.剑指 Offer II 079. 所有子集&quot;&gt;&lt;/a&gt;题目.剑指 Offer II 0</summary>
+      
+    
+    
+    
+    <category term="数据结构与算法" scheme="http://tiawnen42.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="http://tiawnen42.top/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="leetcode" scheme="http://tiawnen42.top/tags/leetcode/"/>
+    
+    <category term="剑指 Offer" scheme="http://tiawnen42.top/tags/%E5%89%91%E6%8C%87-Offer/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣2022-04-14</title>
@@ -545,27 +573,6 @@
     <category term="分析方法" scheme="http://tiawnen42.top/tags/%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/"/>
     
     <category term="数值分析" scheme="http://tiawnen42.top/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>模拟退火算法</title>
-    <link href="http://tiawnen42.top/posts/a0d601b7.html"/>
-    <id>http://tiawnen42.top/posts/a0d601b7.html</id>
-    <published>2021-08-05T02:27:09.000Z</published>
-    <updated>2022-02-23T07:01:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><h2 id="金属退火的原理"><a href="#金属退火的原理" class="headerlink" title="金属退火的原理"></a>金属退火的原理</h2><p>金属退火是将金属加热到一定温度，保持足够时间，然后以适宜速度冷却(通常是缓慢冷却，有时是控制冷却)的一种金属热处理工艺。模拟退火算法来源于固体退火原理，将固体加温至充分高，再让其徐徐冷却，加温时，固体内部粒子随温升变为无序状，内能增大，而徐徐冷却时粒子渐趋有序，在每个温度都达到平衡态，最后在常温时达到基态，内能减为最小。</p><h1 id="求一个给定函数的最值"><a href="#求一个给定函数的最值" class="headerlink" title="求一个给定函数的最值"></a>求一个给定函数的最值</h1><blockquote><p>蒙特卡洛模拟:生成多个解：[0.21,-31.13,314.2,……….]</p><p>穷举法    [0,0.001,0.002……..]</p></blockquote><p>上述两种方法对于多变量最值（可行解太多）很难求解</p><h2 id="一元-x2F-多元函数优化"><a href="#一元-x2F-多元函数优化" class="headerlink" title="一元&#x2F;多元函数优化"></a>一元&#x2F;多元函数优化</h2><p>一元函数：x &#x3D; [1,2]范围内 y &#x3D; sin(10<em>pi</em>x) &#x2F; x 的极值</p><p><img src="http://cdn.tianwen42.top/img/picgo/20210807150229.png" alt="img"></p><p>二元函数：在x,y都是[-5,5]范围内找z &#x3D; x.^2 + y.^2 - 10<em>cos(2</em>pi<em>x) - 10</em>cos(2<em>pi</em>y) + 20 的极值</p><p><img src="http://cdn.tianwen42.top/img/picgo/20210807150233.png" alt="img"></p><h2 id="爬山法（贪心）"><a href="#爬山法（贪心）" class="headerlink" title="爬山法（贪心）"></a>爬山法（贪心）</h2><blockquote><p>是一种启发式算法</p><p>思路：往最大值方向走，容易陷入局部最优值</p><p>模拟退火有概率接受更差的解，可以跳出局部最优解</p></blockquote><p><img src="http://cdn.tianwen42.top/img/picgo/20210808145048.png" alt="img"></p><h1 id="TSP（旅行商问题）"><a href="#TSP（旅行商问题）" class="headerlink" title="TSP（旅行商问题）"></a>TSP（旅行商问题）</h1>]]></content>
-    
-    
-    <summary type="html">本文的主要目的是关于写文章摘要的一些思考，以及Hexo的Next主题添加文章摘要的三种方式，希望能给读者提</summary>
-    
-    
-    
-    <category term="基础" scheme="http://tiawnen42.top/categories/%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="matlab" scheme="http://tiawnen42.top/tags/matlab/"/>
     
   </entry>
   

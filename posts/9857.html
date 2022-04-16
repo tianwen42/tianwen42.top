@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>信条 | 阳林的博客</title>
-  <meta name="keywords" content=" 叭叭两句 ">
-  <meta name="description" content="信条 | 阳林的博客">
+  <title>力扣2022-04-16 | 阳林的博客</title>
+  <meta name="keywords" content=" 算法 , leetcode , 剑指 Offer ">
+  <meta name="description" content="力扣2022-04-16 | 阳林的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="阳林个人信息 性 别：男             年 龄：22 手 机：18720754210         邮 箱：&amp;#121;&amp;#97;&amp;#x6e;&amp;#x67;&amp;#x6c;&amp;#x69;&amp;#110;&amp;#50;&amp;#x30;&amp;#x34;&amp;#x32;&amp;#64;&amp;#103;&amp;#x6d;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d; 专 业：计算机科学与技术">
 <meta property="og:type" content="website">
@@ -777,9 +777,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-生活/信条" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-力扣2022-04-16" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">信条</h1>
+        <h1 class="article-title">力扣2022-04-16</h1>
     
     <div class="article-meta">
         
@@ -789,7 +789,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="生活">生活</a>
+            <a  data-rel="数据结构与算法">数据结构与算法</a>
             
         </span>
         
@@ -797,19 +797,23 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">叭叭两句</a>
+            <a class="color3">算法</a>
+            
+            <a class="color4">leetcode</a>
+            
+            <a class="color4">剑指 Offer</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-03-21 10:51:24'>2021-03-30 19:23</time>
+            发布时间 : <time class="date" title='最后更新: 2022-04-17 00:17:09'>2022-04-16 23:44</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.1k</span>
+        <span>字数:293</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -839,7 +843,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4"><span class="toc-text">不要浪费时间</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="toc-text">碎碎念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%BF%E5%85%8B%E7%90%89%E6%96%AF%E4%B9%8B%E8%B8%B5"><span class="toc-text">阿克琉斯之踵</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%93%B6%E6%B2%B3%E5%B8%9D%E5%9B%BD"><span class="toc-text">银河帝国</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BD%93%E6%97%B6%E5%8F%AA%E9%81%93%E6%98%AF%E5%AF%BB%E5%B8%B8"><span class="toc-text">当时只道是寻常</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-%E5%89%91%E6%8C%87-Offer-II-079-%E6%89%80%E6%9C%89%E5%AD%90%E9%9B%86"><span class="toc-text">题目.剑指 Offer II 079. 所有子集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81"><span class="toc-text">解题代码</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -855,43 +859,51 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>信条</p>
-<span id="more"></span>
+        <h2 id="题目-剑指-Offer-II-079-所有子集"><a href="#题目-剑指-Offer-II-079-所有子集" class="headerlink" title="题目.剑指 Offer II 079. 所有子集"></a>题目.剑指 Offer II 079. 所有子集</h2><p>难度：中等</p>
+<p>给定一个整数数组 nums ，数组中的元素 <strong>互不相同</strong> 。返回该数组所有可能的子集（幂集）。</p>
+<p>解集 <strong>不能</strong> 包含重复的子集。你可以按 <strong>任意顺序</strong> 返回解集。</p>
+<p><strong>示例 1：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums &#x3D; [1,2,3]
+输出：[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h1 id="不要浪费时间"><a href="#不要浪费时间" class="headerlink" title="不要浪费时间"></a>不要浪费时间</h1><p>我最近时常感觉到术业有专攻这句话是对的，人的精力有限，不可能什么领域都触及，即使我深人与人之间的差距，也许有些人拼搏一生达到的高度是别人的一出生就拥有的，但那又怎么样呢？选中一个领域深深的扎下去就好，卓越并非一日之功，要耐住寂寞，保持一颗学徒的心！我来此地为的不是体验生活，一往无前，便是我的信条！</p>
-<h1 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h1><p>我是十分赞同某手册里的这句话，因为我也掉进过坑里。</p>
-<blockquote>
-<p>我手上一本1300页的数学手册，上面记录了人类文明从远古直到二十世纪后半叶的主要数学成果。而我校高等数学教材（上下册）所涵盖的内容，不超过其中的130页。一个真正有志于建造科学大厦的人，是不应抱着一块儿砖头精雕细琢的。</p>
-<p>学习最需要的，不是悲壮的毅力，而是对无限未知的渴求。</p>
-<p>最终来说，学习知识的目的是为后继的知识铺垫，以及培养创造性的思维。所谓有效率的学习，应当是以最高的效率获取知识，服务这两个目标。从现状来看，我们想要把什么都搞扎实的学习习惯，其效率是极端低下的，而在我们通过大量习题，最终扎实掌握的信息里，有效的“知识”却又是如此的少。</p>
+
+<p><strong>示例 2：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums &#x3D; [0]
+输出：[[],[0]]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>1 &lt;&#x3D; nums.length &lt;&#x3D; 10</li>
+<li>-10 &lt;&#x3D; nums[i] &lt;&#x3D; 10</li>
+<li>nums 中的所有元素 <strong>互不相同</strong></li>
+</ul>
+<p>注意：本题与主站 78 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/subsets/">https://leetcode-cn.com/problems/subsets/</a></p>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/TVdhkn/">https://leetcode-cn.com/problems/TVdhkn/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<p>可以正常遍历，也可以用dfs</p>
 </blockquote>
-<p> 我想起乐老师说的，学数学，更多是一种思考的方法，要常思考，不然时间过去了，有些人的眼睛里有些小模糊，小浑浊，不如刚上大学时那么的明亮了，</p>
-<h1 id="阿克琉斯之踵"><a href="#阿克琉斯之踵" class="headerlink" title="阿克琉斯之踵"></a>阿克琉斯之踵</h1><p>阿喀琉斯之踵（Achilles’ Heel），原指阿喀琉斯的脚后跟，因是其身体唯一一处没有浸泡到冥河水的地方，成为他唯一的弱点。阿喀琉斯后来在特洛伊战争中被毒箭射中脚踝而丧命。现引申为致命的弱点，要害。 阿喀琉斯，是凡人英雄珀琉斯和海洋女神忒提斯的爱子。忒提斯为了让儿子炼成“金钟罩”，在他刚出生时就将其倒提着浸进冥河。遗憾的是，阿喀琉斯被母亲捏住的脚后跟却不慎露在水外，在全身留下了唯一一处“死穴”。后来，阿喀琉斯被帕里斯一箭射中脚踝而死去。后人常以“阿喀琉斯之踵”譬喻这样一个道理：即使是再强大的英雄，也有致命的死穴或软肋。</p>
-<h1 id="银河帝国"><a href="#银河帝国" class="headerlink" title="银河帝国"></a>银河帝国</h1><p>突然想到了起很久之前看的银河帝国系列，</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9F%BA%E5%9C%B0/1691622">基地</a>(Foundation)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9F%BA%E5%9C%B0%E4%B8%8E%E5%B8%9D%E5%9B%BD">基地与帝国</a> (Foundation and Empire)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%AC%AC%E4%BA%8C%E5%9F%BA%E5%9C%B0">第二基地</a> (Second Foudation)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9F%BA%E5%9C%B0%E5%89%8D%E5%A5%8F">基地前奏</a> (Prelude to Foundation)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%BF%88%E5%90%91%E5%9F%BA%E5%9C%B0">迈向基地</a> (Forward the Foundation)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9F%BA%E5%9C%B0%E8%BE%B9%E7%BC%98">基地边缘</a> (Foundation’s Edge)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9F%BA%E5%9C%B0%E4%B8%8E%E5%9C%B0%E7%90%83">基地与地球</a> (Foundation and Earth)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%88%91%EF%BC%8C%E6%9C%BA%E5%99%A8%E4%BA%BA/15993891">我，机器人</a> (I, Robot)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%92%A2%E7%A9%B4">钢穴</a> (The Caves of Steel)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%A3%B8%E9%98%B3">裸阳</a> (The Naked Sun)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9B%99%E5%85%89%E4%B8%AD%E7%9A%84%E6%9C%BA%E5%99%A8%E4%BA%BA">曙光中的机器人</a> (The Robots of Dawn)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%8E%E5%B8%9D%E5%9B%BD">机器人与帝国</a> (Robots and Empire)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%B9%81%E6%98%9F%E8%8B%A5%E5%B0%98">繁星若尘</a> (The Stars, Like Dust)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%98%9F%E7%A9%BA%E6%9A%97%E6%B5%81">星空暗流</a>(The Currents of Space)</li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%8B%8D%E7%A9%B9%E4%B8%80%E7%B2%9F">苍穹一粟</a> (Pebblein the Sky)</li>
-</ol>
-<p><img src="http://cdn.tianwen42.top/img/picgo/20210623095935.jpeg" alt="img"></p>
-<p>我觉得很适合在这个词了，一个统治超过2500万个住人行星、疆域横跨十万光年、总计数兆亿人口的庞大帝国崛起——银河帝国，虽然毫无征兆，但已存在一万两千年之久的银河帝国突然灭亡，整个银河进入黑暗时期，即使再过于强大也有着致命的弱点，那么从自己出发也同样适用，如今的国家博弈也适用，这就是我们常说的黑天鹅与灰犀牛事件。</p>
-<p>强如银河帝国也有倾覆的一天，川陀，我还记得这个全宇宙的中心，想起来仍有些怀念.</p>
-<h1 id="当时只道是寻常"><a href="#当时只道是寻常" class="headerlink" title="当时只道是寻常"></a>当时只道是寻常</h1><p>如果你对一个人有什么话要说的，就去说吧，果断一点。</p>
-<blockquote>
-<p>不乱于心 不困于情<br>不滞于物 不怠于身<br>不溺于思 不迷于境<br>不念过往 不畏将来</p>
-</blockquote>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    vector&lt;vector&lt;int&gt;&gt; subsets(vector&lt;int&gt;&amp; nums) &#123;
+        vector&lt;vector&lt;int&gt;&gt; res&#123;vector&lt;int&gt;()&#125;;
+        int i, j, len;
+        for (i&#x3D;0; i&lt;nums.size(); i++) &#123;
+            len &#x3D; res.size();
+            for (j&#x3D;0; j&lt;len; j++) &#123;
+                auto tmp &#x3D; res[j];
+                tmp.push_back(nums[i]);
+                res.push_back(tmp);
+            &#125;
+        &#125;
+        return res;
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yanglin2042@gmail.com </span>
