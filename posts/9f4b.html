@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>力扣2022-03-25 | 阳林的博客</title>
-  <meta name="keywords" content=" 算法 , leetcode ">
-  <meta name="description" content="力扣2022-03-25 | 阳林的博客">
+  <title>判断一个多边形的形状 | 阳林的博客</title>
+  <meta name="keywords" content=" 算法 , 数学 , 图形学 ">
+  <meta name="description" content="判断一个多边形的形状 | 阳林的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="myRoutine-2021Sep  MathorCup    9-9  esir map story    9-23  CET-6报名  Oct      Nov  华教杯全国大学生数学竞赛     11月27日至11月28日     ￥60  2021年全国大学生英语词汇竞赛      11月27日至11月28日     ￥29  大学生gis技能应用大赛江苏邀请赛      11月14日">
 <meta property="og:type" content="website">
@@ -780,9 +780,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-数据结构与算法/力扣2022-03-25" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-判断一个多边形的形状" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">力扣2022-03-25</h1>
+        <h1 class="article-title">判断一个多边形的形状</h1>
     
     <div class="article-meta">
         
@@ -802,19 +802,21 @@
             
             <a class="color3">算法</a>
             
-            <a class="color4">leetcode</a>
+            <a class="color3">数学</a>
+            
+            <a class="color4">图形学</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-04-11 14:14:12'>2022-03-25 21:02</time>
+            发布时间 : <time class="date" title='最后更新: 2022-04-15 17:18:17'>2022-04-15 16:52</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:245</span>
+        <span>字数:38</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -844,7 +846,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81"><span class="toc-text">解题代码</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E5%A4%9A%E8%BE%B9%E5%BD%A2%EF%BC%8C%E5%88%A4%E6%96%AD%E5%87%B9%E6%80%A7%EF%BC%8C%E5%87%B8%E6%80%A7%EF%BC%8C%E5%9C%86%E5%BD%A2"><span class="toc-text">给定一个多边形，判断凹性，凸性，圆形</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81"><span class="toc-text">解题代码</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -860,55 +862,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><ol start="217">
-<li>存在重复元素</li>
-</ol>
-<p>难度：简单</p>
-<p><code>nums</code></p>
-<p><strong>至少两次</strong></p>
-<p><code>true</code></p>
-<p><code>false</code></p>
-<p><strong>示例 1：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：nums &#x3D; [1,2,3,1]
-输出：true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-<p><strong>示例 2：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：nums &#x3D; [1,2,3,4]
-输出：false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-<p><strong>示例 3：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：nums &#x3D; [1,1,1,3,3,4,3,2,4,2]
-输出：true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>1 &lt;&#x3D; nums.length &lt;&#x3D; 10<sup>5</sup></li>
-<li>-10<sup>9</sup> &lt;&#x3D; nums[i] &lt;&#x3D; 10<sup>9</sup></li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/contains-duplicate/">https://leetcode-cn.com/problems/contains-duplicate/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+        <h2 id="给定一个多边形，判断凹性，凸性，圆形"><a href="#给定一个多边形，判断凹性，凸性，圆形" class="headerlink" title="给定一个多边形，判断凹性，凸性，圆形"></a>给定一个多边形，判断凹性，凸性，圆形</h2><p><img src="https://qiniu.tianwen42.top/picgo/20220415170351.jpg" alt="21"></p>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<p>排序，有相同的肯定近邻</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>面积&#x2F;周长^2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>圆形</td>
+<td>1&#x2F;4pi</td>
+</tr>
+<tr>
+<td>凹性</td>
+<td></td>
+</tr>
+<tr>
+<td>凸性</td>
+<td></td>
+</tr>
+</tbody></table>
 </blockquote>
-<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
-
-public:
-    bool containsDuplicate(vector&lt;int&gt;&amp; nums) &#123;
-        sort(nums.begin(), nums.end());
-        while(nums.size()&gt;1&amp;&amp;(nums[nums.size()-1]!&#x3D;nums[nums.size()-2]))&#123;
-            &#x2F;&#x2F; 判断栈顶和倒二是否相等，注意边界条件
-            nums.pop_back();
-        &#125;
-        &#x2F;&#x2F; for(int i&#x3D;0; i&lt;nums.size();i++)&#123;
-        &#x2F;&#x2F;     cout &lt;&lt; nums[i] &lt;&lt; &quot; &quot;;
-        &#x2F;&#x2F; &#125;
-        if(nums.size()&#x3D;&#x3D;1) return false;else return true;
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
       

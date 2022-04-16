@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>判断一个多边形的形状</title>
+      <link href="/posts/9f4b.html"/>
+      <url>/posts/9f4b.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="给定一个多边形，判断凹性，凸性，圆形"><a href="#给定一个多边形，判断凹性，凸性，圆形" class="headerlink" title="给定一个多边形，判断凹性，凸性，圆形"></a>给定一个多边形，判断凹性，凸性，圆形</h2><p><img src="https://qiniu.tianwen42.top/picgo/20220415170351.jpg" alt="21"></p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><table><thead><tr><th></th><th>面积&#x2F;周长^2</th></tr></thead><tbody><tr><td>圆形</td><td>1&#x2F;4pi</td></tr><tr><td>凹性</td><td></td></tr><tr><td>凸性</td><td></td></tr></tbody></table></blockquote><h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 图形学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>力扣2022-04-14</title>
       <link href="/posts/59d6.html"/>
       <url>/posts/59d6.html</url>
@@ -504,9 +533,9 @@
       
         <tags>
             
-            <tag> matlab </tag>
-            
             <tag> 算法 </tag>
+            
+            <tag> matlab </tag>
             
             <tag> 工程 </tag>
             
@@ -846,7 +875,7 @@
       <link href="/posts/b10a2463.html"/>
       <url>/posts/b10a2463.html</url>
       
-        <content type="html"><![CDATA[<h3 id="命令Command"><a href="#命令Command" class="headerlink" title="命令Command"></a>命令Command</h3><ul><li>git intit [^建仓库]</li><li>git add [^添加暂存区]</li><li>git commit -m “log” [^提交]</li><li>git diff <u>filename</u>[^工作区和仓库比较]</li></ul><h3 id="报错Error"><a href="#报错Error" class="headerlink" title="报错Error"></a>报错Error</h3><h5 id="git中报unable-to-auto-detect-email-address-错误的解决拌办法"><a href="#git中报unable-to-auto-detect-email-address-错误的解决拌办法" class="headerlink" title="git中报unable to auto-detect email address 错误的解决拌办法"></a><a href="https://www.cnblogs.com/fuyuteng/p/11413968.html">git中报unable to auto-detect email address 错误的解决拌办法</a></h5><blockquote><p>git config –global user.name “yanglin”<br>git config –global user.email “<a href="mailto:&#50;&#50;&#x37;&#x34;&#x39;&#52;&#x31;&#52;&#x30;&#57;&#64;&#113;&#113;&#46;&#99;&#111;&#x6d;">&#50;&#50;&#x37;&#x34;&#x39;&#52;&#x31;&#52;&#x30;&#57;&#64;&#113;&#113;&#46;&#99;&#111;&#x6d;</a>“  </p></blockquote><h2 id="hexo搭建"><a href="#hexo搭建" class="headerlink" title="hexo搭建"></a>hexo搭建</h2><h3 id="git连接本地"><a href="#git连接本地" class="headerlink" title="git连接本地"></a>git连接本地</h3><pre><code>创建证书登录，把自己电脑的公钥，也就是 ~/.ssh/id_rsa.pub 文件里的内容添加到服务器的 /home/git/.ssh/authorized_keys 文件中，添加公钥之后可以防止每次 push 都输入密码。</code></pre><h2 id="bat快速push"><a href="#bat快速push" class="headerlink" title="bat快速push"></a>bat快速push</h2><pre class="line-numbers language-bat" data-language="bat"><code class="language-bat">@echo off@echo &#x2F;&#x2F; +----------------------------------------------------------------------@echo &#x2F;&#x2F; ^| 一键Git Push代码@echo &#x2F;&#x2F; +----------------------------------------------------------------------@echo &#x2F;&#x2F; rem 获取时间set filename&#x3D;%date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%set &quot;filename&#x3D;%filename: &#x3D;0%&quot;set &quot;content&#x3D;%filename%&quot;set &#x2F;p &quot;content&#x3D;请输入提交说明：&quot;set &quot;file&#x3D;.&quot;set &#x2F;p &quot;file&#x3D;请输入需要提交的文件或目录，直接回车则为当前目录下所有内容：&quot;rem 调用git命令，如果没有找到git命令，说明环境变量未配置rem 将git改成git安装目录下的git.exe也可以实现git add %file%git commit -m %content%git pushpause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h3 id="命令Command"><a href="#命令Command" class="headerlink" title="命令Command"></a>命令Command</h3><ul><li>git intit [^建仓库]</li><li>git add [^添加暂存区]</li><li>git commit -m “log” [^提交]</li><li>git diff <u>filename</u>[^工作区和仓库比较]</li></ul><h3 id="报错Error"><a href="#报错Error" class="headerlink" title="报错Error"></a>报错Error</h3><h5 id="git中报unable-to-auto-detect-email-address-错误的解决拌办法"><a href="#git中报unable-to-auto-detect-email-address-错误的解决拌办法" class="headerlink" title="git中报unable to auto-detect email address 错误的解决拌办法"></a><a href="https://www.cnblogs.com/fuyuteng/p/11413968.html">git中报unable to auto-detect email address 错误的解决拌办法</a></h5><blockquote><p>git config –global user.name “yanglin”<br>git config –global user.email “<a href="mailto:&#x32;&#50;&#x37;&#52;&#x39;&#x34;&#x31;&#x34;&#48;&#57;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;">&#x32;&#50;&#x37;&#52;&#x39;&#x34;&#x31;&#x34;&#48;&#57;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;</a>“  </p></blockquote><h2 id="hexo搭建"><a href="#hexo搭建" class="headerlink" title="hexo搭建"></a>hexo搭建</h2><h3 id="git连接本地"><a href="#git连接本地" class="headerlink" title="git连接本地"></a>git连接本地</h3><pre><code>创建证书登录，把自己电脑的公钥，也就是 ~/.ssh/id_rsa.pub 文件里的内容添加到服务器的 /home/git/.ssh/authorized_keys 文件中，添加公钥之后可以防止每次 push 都输入密码。</code></pre><h2 id="bat快速push"><a href="#bat快速push" class="headerlink" title="bat快速push"></a>bat快速push</h2><pre class="line-numbers language-bat" data-language="bat"><code class="language-bat">@echo off@echo &#x2F;&#x2F; +----------------------------------------------------------------------@echo &#x2F;&#x2F; ^| 一键Git Push代码@echo &#x2F;&#x2F; +----------------------------------------------------------------------@echo &#x2F;&#x2F; rem 获取时间set filename&#x3D;%date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%set &quot;filename&#x3D;%filename: &#x3D;0%&quot;set &quot;content&#x3D;%filename%&quot;set &#x2F;p &quot;content&#x3D;请输入提交说明：&quot;set &quot;file&#x3D;.&quot;set &#x2F;p &quot;file&#x3D;请输入需要提交的文件或目录，直接回车则为当前目录下所有内容：&quot;rem 调用git命令，如果没有找到git命令，说明环境变量未配置rem 将git改成git安装目录下的git.exe也可以实现git add %file%git commit -m %content%git pushpause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
