@@ -6,7 +6,7 @@
   <link href="http://tiawnen42.top/atom.xml" rel="self"/>
   
   <link href="http://tiawnen42.top/"/>
-  <updated>2022-04-28T13:54:15.876Z</updated>
+  <updated>2022-04-28T13:54:29.370Z</updated>
   <id>http://tiawnen42.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://tiawnen42.top/posts/bd6d.html"/>
     <id>http://tiawnen42.top/posts/bd6d.html</id>
     <published>2022-04-28T12:41:46.000Z</published>
-    <updated>2022-04-28T13:54:15.876Z</updated>
+    <updated>2022-04-28T13:54:29.370Z</updated>
     
     <content type="html"><![CDATA[<h2 id="题目-fb"><a href="#题目-fb" class="headerlink" title="题目.fb"></a>题目.fb</h2><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>分别从几个方面优化，在写中。。。。</p></blockquote><h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><h3 id="最朴素的方法（非递归）"><a href="#最朴素的方法（非递归）" class="headerlink" title="最朴素的方法（非递归）"></a>最朴素的方法（非递归）</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int main() &#123;    int t1 &#x3D; 0, t2 &#x3D; 1, nextTerm &#x3D; 0, n;    cout &lt;&lt; &quot;Enter a positive number: &quot;;    cin &gt;&gt; n;    &#x2F;&#x2F; displays the first two terms which is always 0 and 1    cout &lt;&lt; &quot;Fibonacci Series: &quot; &lt;&lt; t1 &lt;&lt; &quot;, &quot; &lt;&lt; t2 &lt;&lt; &quot;, &quot;;    nextTerm &#x3D; t1 + t2;    while(nextTerm &lt;&#x3D; n) &#123;        cout &lt;&lt; nextTerm &lt;&lt; &quot;, &quot;;        t1 &#x3D; t2;        t2 &#x3D; nextTerm;        nextTerm &#x3D; t1 + t2;    &#125;    return 0;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><blockquote><p>递归时间复杂度 &#x3D; 解决一个子问题时间*子问题个数，</p><p> fb（n）&#x3D;   fb（n-1）+fb（n-2）,是一个二叉树结构</p><p>递归的复杂度O(2^n)，你这样子就慢了:dog:</p></blockquote><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public  int fb(int n) &#123;    if (n &#x3D;&#x3D; 1) &#123;      return 1;    &#125;    if (n &#x3D;&#x3D; 2) &#123;      return 2;    &#125;    return numWays(n - 1) + numWays(n - 2);  &#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="DP"><a href="#DP" class="headerlink" title="DP"></a>DP</h3><blockquote><p>用一个hashmap存储结果</p><p>第一步，算顶部的两项f（10）&#x3D; f(9) + f(8)</p><p>第二步，算顶部次级节点f(9) &#x3D; f（8）+ f（7），可以看到fb（8）重复</p><p>第三步，剪枝，跳过fb（8）节点</p><p>直到叶节点，递归树撸到底</p><p>DP是一种有记忆的算法</p></blockquote><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;#include &lt;unordered_map&gt;using namespace std;class Solution &#123;  unordered_map&lt;long long, long long&gt; map;public:  long long numWays(int n) &#123;    if (n &#x3D;&#x3D; 0) &#123;      return 1;    &#125;    if (n &lt;&#x3D; 2) &#123;      return n;    &#125;    if (map.count(n) !&#x3D; 0) &#123;      return map[n];    &#125; else &#123;      map[n] &#x3D; numWays(n - 1) + numWays(n - 2);      return numWays(n);    &#125;  &#125;&#125;;int main() &#123;  Solution tool &#x3D; Solution();  for (int i &#x3D; 1; i &lt; 50; i++) &#123;    cout &lt;&lt; i &lt;&lt; &quot;HASH  &quot; &lt;&lt; tool.numWays(i) &lt;&lt; endl;  &#125;  &#x2F;&#x2F; cout &lt;&lt; Solution().numWays(2);  cout &lt;&lt;LLONG_MAX;  return 0;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>相似    <a href="https://leetcode-cn.com/problems/longest-increasing-subsequence">300. 最长递增子序列</a></li></ul>]]></content>
     
@@ -32,8 +32,6 @@
       
     
     
-    
-    <category term="数据结构与算法" scheme="http://tiawnen42.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
     <category term="算法" scheme="http://tiawnen42.top/tags/%E7%AE%97%E6%B3%95/"/>
@@ -47,7 +45,7 @@
     <link href="http://tiawnen42.top/posts/9c17.html"/>
     <id>http://tiawnen42.top/posts/9c17.html</id>
     <published>2022-04-19T14:43:23.000Z</published>
-    <updated>2022-04-19T14:58:57.672Z</updated>
+    <updated>2022-04-28T13:54:29.370Z</updated>
     
     <content type="html"><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><ol start="342"><li>4的幂</li></ol><p>难度：简单</p><p>给定一个整数，写一个函数来判断它是否是 4 的幂次方。如果是，返回 true ；否则，返回 false 。</p><p>整数 n 是 4 的幂次方需满足：存在整数 x 使得 n &#x3D;&#x3D; 4<sup>x</sup></p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n &#x3D; 16输出：true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n &#x3D; 5输出：false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 3：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n &#x3D; 1输出：true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>-2<sup>31</sup> &lt;&#x3D; n &lt;&#x3D; 2<sup>31</sup> - 1</li></ul><p><strong>进阶：</strong>你能不使用循环或者递归来完成本题吗？</p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/power-of-four/">https://leetcode-cn.com/problems/power-of-four/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>4的n次幂模4  和 4的 n-k次幂模4 都为0</p></blockquote><h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;* * @lc app&#x3D;leetcode.cn id&#x3D;342 lang&#x3D;cpp * * [342] 4的幂 *&#x2F;&#x2F;&#x2F; @lc code&#x3D;startclass Solution &#123;public:    bool isPowerOfFour(int num) &#123;        return num&gt;0 &amp;&amp; (num &#x3D;&#x3D; 1 ||(num%4&#x3D;&#x3D;0 &amp;&amp; isPowerOfFour(num&#x2F;4)));    &#125;&#125;;&#x2F;&#x2F; @lc code&#x3D;end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
     
@@ -63,6 +61,8 @@
     
     
     
+    <category term="数据结构与算法" scheme="http://tiawnen42.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
     
     <category term="算法" scheme="http://tiawnen42.top/tags/%E7%AE%97%E6%B3%95/"/>
     
@@ -75,7 +75,7 @@
     <link href="http://tiawnen42.top/posts/9857.html"/>
     <id>http://tiawnen42.top/posts/9857.html</id>
     <published>2022-04-16T15:44:03.000Z</published>
-    <updated>2022-04-17T15:54:38.303Z</updated>
+    <updated>2022-04-28T13:54:29.370Z</updated>
     
     <content type="html"><![CDATA[<h2 id="题目-剑指-Offer-II-079-所有子集"><a href="#题目-剑指-Offer-II-079-所有子集" class="headerlink" title="题目.剑指 Offer II 079. 所有子集"></a>题目.剑指 Offer II 079. 所有子集</h2><p>难度：中等</p><p>给定一个整数数组 nums ，数组中的元素 <strong>互不相同</strong> 。返回该数组所有可能的子集（幂集）。</p><p>解集 <strong>不能</strong> 包含重复的子集。你可以按 <strong>任意顺序</strong> 返回解集。</p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：nums &#x3D; [1,2,3]输出：[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：nums &#x3D; [0]输出：[[],[0]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>1 &lt;&#x3D; nums.length &lt;&#x3D; 10</li><li>-10 &lt;&#x3D; nums[i] &lt;&#x3D; 10</li><li>nums 中的所有元素 <strong>互不相同</strong></li></ul><p>注意：本题与主站 78 题相同： <a href="https://leetcode-cn.com/problems/subsets/">https://leetcode-cn.com/problems/subsets/</a></p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/TVdhkn/">https://leetcode-cn.com/problems/TVdhkn/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>可以正常遍历，也可以用dfs</p></blockquote><h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public:    vector&lt;vector&lt;int&gt;&gt; subsets(vector&lt;int&gt;&amp; nums) &#123;        vector&lt;vector&lt;int&gt;&gt; res&#123;vector&lt;int&gt;()&#125;;        int i, j, len;        for (i&#x3D;0; i&lt;nums.size(); i++) &#123;            len &#x3D; res.size();            for (j&#x3D;0; j&lt;len; j++) &#123;                auto tmp &#x3D; res[j];                tmp.push_back(nums[i]);                res.push_back(tmp);            &#125;        &#125;        return res;    &#125;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
     
@@ -86,6 +86,8 @@
       
     
     
+    
+    <category term="数据结构与算法" scheme="http://tiawnen42.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
     <category term="算法" scheme="http://tiawnen42.top/tags/%E7%AE%97%E6%B3%95/"/>
