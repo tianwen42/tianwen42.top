@@ -850,11 +850,11 @@
     
     
     <entry>
-      <title>cass7.0使用</title>
+      <title>本科课程的记录</title>
       <link href="/posts/3ad5cb2d.html"/>
       <url>/posts/3ad5cb2d.html</url>
       
-        <content type="html"><![CDATA[<p>空间数据采集课程，用到了cass7.0</p><span id="more"></span><h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><h3 id="测绘数据类型"><a href="#测绘数据类型" class="headerlink" title="测绘数据类型"></a>测绘数据类型</h3><blockquote><p>  .shp(矢量文件)</p><p>  .hdr</p></blockquote><blockquote><p>  .tif（栅格）</p><p>  .img</p></blockquote><blockquote><p>  .csv（文本）</p></blockquote><blockquote><p>  .dwg（cass数据）</p><p>  .cad（cad数据）</p><p>  .dat(元数据)</p></blockquote><p>cass主要应用于地形图测绘，</p><h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p>配置文件</p><blockquote><p>  D:\Program Files (x86)\Cass\SYSTEM\Acad.pgp</p></blockquote><p>EX, *EXTEND</p><img src="https://cdn.tianwen42.top/img/picgo/image-20210422151023060.png" alt="image-20210422151023060" style="zoom:33%;" /><h3 id="配置文件介绍"><a href="#配置文件介绍" class="headerlink" title="配置文件介绍"></a>配置文件介绍</h3><h3 id="编辑功能"><a href="#编辑功能" class="headerlink" title="编辑功能"></a>编辑功能</h3><blockquote><p>  F8正交开关</p><p>  F3对象追踪</p></blockquote><h4 id="高程点"><a href="#高程点" class="headerlink" title="高程点"></a>高程点</h4><p><img src="https://cdn.tianwen42.top/img/picgo/image-20210422160143884.png" alt="image-20210422160143884"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="所学课程的记录"><a href="#所学课程的记录" class="headerlink" title="所学课程的记录"></a>所学课程的记录</h2><table><thead><tr><th>课程名</th></tr></thead><tbody><tr><td>普通测量学</td></tr><tr><td>区域分析方法</td></tr><tr><td>C语言程序设计</td></tr><tr><td>地图学</td></tr><tr><td>地理学综合野外实习</td></tr><tr><td><a href="https://github.com/tianwen42/courses">空间数据采集与管理</a></td></tr><tr><td><a href="https://github.com/tianwen42/courses">统计学基础</a></td></tr><tr><td>创新创业教育(二)</td></tr><tr><td><a href="https://github.com/tianwen42/courses">计算机辅助制图（AutoCAD）</a></td></tr><tr><td><a href="https://github.com/tianwen42/web-design">网页设计基础</a></td></tr><tr><td>数字摄影测量学</td></tr><tr><td><a href="https://github.com/tianwen42/DB-curriculum-design">空间数据库课程设计</a></td></tr><tr><td><a href="https://github.com/tianwen42/courses">遥感数字图像处理</a></td></tr><tr><td>地理信息系统原理和应用</td></tr><tr><td><a href="https://github.com/tianwen42/courses">GIS空间分析</a></td></tr><tr><td>人文与经济地理学</td></tr><tr><td>遥感概论</td></tr><tr><td>线性代数</td></tr><tr><td>面向对象程序设计</td></tr><tr><td>数据结构</td></tr><tr><td>地理信息系统原理</td></tr></tbody></table>]]></content>
       
       
       <categories>
@@ -866,7 +866,7 @@
       
         <tags>
             
-            <tag> cass </tag>
+            <tag> 本科 </tag>
             
         </tags>
       
