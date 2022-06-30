@@ -571,6 +571,31 @@
     
     
     <entry>
+      <title>做题小Tips</title>
+      <link href="/posts/c8f3.html"/>
+      <url>/posts/c8f3.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>假定给定一串数字,基本的算法实现</p></blockquote><ul><li>int n&#x3D;105;</li></ul><h3 id="x2F-x2F-取位数"><a href="#x2F-x2F-取位数" class="headerlink" title="&#x2F;&#x2F;取位数"></a>&#x2F;&#x2F;取位数</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public:    int counting1(int x) &#123;        &#x2F;&#x2F;计位数        using namespace std;        cout &lt;&lt; x &lt;&lt; endl;        int n &#x3D; 0;        while (x) &#123;            x &#x2F;&#x3D; 10;            n++;        &#125;        return n;    &#125;    int counting2(int x) &#123;        &#x2F;&#x2F;记位数        using namespace std;        cout &lt;&lt; x &lt;&lt; endl;        int n &#x3D; 0;        while (x) &#123;            if (x &lt; 10) &#123;                n++;            &#125; else &#123;                n +&#x3D; 2;            &#125;            x &#x2F;&#x3D; 100;        &#125;        return n;    &#125;    int counting3(int x) &#123;        &#x2F;&#x2F;记位数        using namespace std;        cout &lt;&lt; x &lt;&lt; endl;        int n &#x3D; 1 + (int)log10(x);;        return n;    &#125;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="x2F-x2F-数字按逆序遍历"><a href="#x2F-x2F-数字按逆序遍历" class="headerlink" title="&#x2F;&#x2F;数字按逆序遍历"></a>&#x2F;&#x2F;数字按逆序遍历</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public:    int digitalSection(int x) &#123;        &#x2F;&#x2F;数字按逆序遍历（栈）        using namespace std;        cout &lt;&lt; x &lt;&lt; endl;        while (x !&#x3D; 0) &#123;            cout &lt;&lt; &quot;x%10取最末位: &quot; &lt;&lt; x % 10 &lt;&lt; &quot;  &quot;;            cout &lt;&lt; &quot;x&#x2F;10去除末位: &quot; &lt;&lt; x &#x2F; 10 &lt;&lt; endl;            x &#x2F;&#x3D; 10;        &#125;        return 0;    &#125;&#125;;&#x2F;&#x2F; 105&#x2F;&#x2F; x%10取最末位: 5  x&#x2F;10去除末位: 10&#x2F;&#x2F; x%10取最末位: 0  x&#x2F;10去除末位: 1&#x2F;&#x2F; x%10取最末位: 1  x&#x2F;10去除末位: 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="x2F-x2F-数字按顺序遍历"><a href="#x2F-x2F-数字按顺序遍历" class="headerlink" title="&#x2F;&#x2F;数字按顺序遍历"></a>&#x2F;&#x2F;数字按顺序遍历</h3><pre class="line-numbers language-none"><code class="language-none"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>matlab实战</title>
       <link href="/posts/6d4ea018.html"/>
       <url>/posts/6d4ea018.html</url>
@@ -1009,7 +1034,7 @@
       
       <categories>
           
-          <category> 读书 </category>
+          <category> GIS </category>
           
       </categories>
       

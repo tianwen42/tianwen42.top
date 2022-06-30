@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>力扣 2022-02-25 | 阳木木和他的朋友们</title>
-  <meta name="keywords" content=" 斐波那契数列 ">
-  <meta name="description" content="力扣 2022-02-25 | 阳木木和他的朋友们">
+  <title>做题小Tips | 阳木木和他的朋友们</title>
+  <meta name="keywords" content=" 算法 ">
+  <meta name="description" content="做题小Tips | 阳木木和他的朋友们">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="阳林个人信息 性 别：男             年 龄：22 手 机：18720754210         邮 箱：&amp;#121;&amp;#x61;&amp;#x6e;&amp;#x67;&amp;#x6c;&amp;#x69;&amp;#110;&amp;#50;&amp;#48;&amp;#52;&amp;#50;&amp;#64;&amp;#x67;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109; 专 业：计算机科学与技术      期望">
 <meta property="og:type" content="website">
@@ -833,9 +833,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-数据结构与算法/力扣 2022-02-25" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据结构与算法/Tips" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">力扣 2022-02-25</h1>
+        <h1 class="article-title">做题小Tips</h1>
     
     <div class="article-meta">
         
@@ -853,19 +853,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color2">斐波那契数列</a>
+            <a class="color3">算法</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-04-11 14:14:12'>2022-02-25 13:01</time>
+            发布时间 : <time class="date" title='最后更新: 2022-04-11 14:14:08'>2022-02-01 15:45</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:285</span>
+        <span>字数:297</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -884,7 +884,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE509-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="toc-text">题目509.斐波那契数</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#x2F-x2F-%E5%8F%96%E4%BD%8D%E6%95%B0"><span class="toc-text">&#x2F;&#x2F;取位数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x2F-x2F-%E6%95%B0%E5%AD%97%E6%8C%89%E9%80%86%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-text">&#x2F;&#x2F;数字按逆序遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x2F-x2F-%E6%95%B0%E5%AD%97%E6%8C%89%E9%A1%BA%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-text">&#x2F;&#x2F;数字按顺序遍历</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -900,61 +900,71 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="题目509-斐波那契数"><a href="#题目509-斐波那契数" class="headerlink" title="题目509.斐波那契数"></a>题目509.斐波那契数</h2><p>难度：简单</p>
-<p><strong>斐波那契数</strong> （通常用 F(n) 表示）形成的序列称为 <strong>斐波那契数列</strong> 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：</p>
-<pre class="line-numbers language-none"><code class="language-none">F(0) &#x3D; 0，F(1) &#x3D; 1
-F(n) &#x3D; F(n - 1) + F(n - 2)，其中 n &gt; 1
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-<p>给定 n ，请计算 F(n) 。</p>
-<p><strong>示例 1：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：n &#x3D; 2
-输出：1
-解释：F(2) &#x3D; F(1) + F(0) &#x3D; 1 + 0 &#x3D; 1
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-<p><strong>示例 2：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：n &#x3D; 3
-输出：2
-解释：F(3) &#x3D; F(2) + F(1) &#x3D; 1 + 1 &#x3D; 2
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-<p><strong>示例 3：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：n &#x3D; 4
-输出：3
-解释：F(4) &#x3D; F(3) + F(2) &#x3D; 2 + 1 &#x3D; 3
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-<p><strong>提示：</strong></p>
+        <blockquote>
+<p>假定给定一串数字,基本的算法实现</p>
+</blockquote>
 <ul>
-<li>0 &lt;&#x3D; n &lt;&#x3D; 30</li>
+<li>int n&#x3D;105;</li>
 </ul>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fibonacci-number/">https://leetcode-cn.com/problems/fibonacci-number/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#递归法</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword">return</span> <span class="token number">0</span>
-        <span class="token keyword">elif</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword">return</span> <span class="token number">1</span>
-        <span class="token keyword">else</span><span class="token punctuation">:</span><span class="token keyword">return</span> self<span class="token punctuation">.</span>fib<span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span>self<span class="token punctuation">.</span>fib<span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="x2F-x2F-取位数"><a href="#x2F-x2F-取位数" class="headerlink" title="&#x2F;&#x2F;取位数"></a>&#x2F;&#x2F;取位数</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    int counting1(int x) &#123;
+        &#x2F;&#x2F;计位数
+        using namespace std;
+        cout &lt;&lt; x &lt;&lt; endl;
+        int n &#x3D; 0;
+        while (x) &#123;
+            x &#x2F;&#x3D; 10;
+            n++;
+        &#125;
+        return n;
+    &#125;
 
-<p><img src="http://cdn.tianwen42.top/picgo/image-20220225133243080.png" alt="image-20220225133243080"></p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#通项法</span>
-<span class="token keyword">import</span> math
+    int counting2(int x) &#123;
+        &#x2F;&#x2F;记位数
+        using namespace std;
+        cout &lt;&lt; x &lt;&lt; endl;
+        int n &#x3D; 0;
+        while (x) &#123;
+            if (x &lt; 10) &#123;
+                n++;
+            &#125; else &#123;
+                n +&#x3D; 2;
+            &#125;
+            x &#x2F;&#x3D; 100;
+        &#125;
+        return n;
+    &#125;
 
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        :type N: int
-        :rtype: int
-        """</span>
-        sqrt5<span class="token operator">=</span>math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> <span class="token builtin">round</span><span class="token punctuation">(</span><span class="token builtin">pow</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span>sqrt5<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span>N<span class="token punctuation">)</span><span class="token operator">/</span>sqrt5<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    int counting3(int x) &#123;
+        &#x2F;&#x2F;记位数
+        using namespace std;
+        cout &lt;&lt; x &lt;&lt; endl;
+        int n &#x3D; 1 + (int)log10(x);;
+        return n;
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="x2F-x2F-数字按逆序遍历"><a href="#x2F-x2F-数字按逆序遍历" class="headerlink" title="&#x2F;&#x2F;数字按逆序遍历"></a>&#x2F;&#x2F;数字按逆序遍历</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    int digitalSection(int x) &#123;
+        &#x2F;&#x2F;数字按逆序遍历（栈）
+        using namespace std;
+        cout &lt;&lt; x &lt;&lt; endl;
+        while (x !&#x3D; 0) &#123;
+            cout &lt;&lt; &quot;x%10取最末位: &quot; &lt;&lt; x % 10 &lt;&lt; &quot;  &quot;;
+            cout &lt;&lt; &quot;x&#x2F;10去除末位: &quot; &lt;&lt; x &#x2F; 10 &lt;&lt; endl;
+            x &#x2F;&#x3D; 10;
+        &#125;
+        return 0;
+    &#125;
+&#125;;
+&#x2F;&#x2F; 105
+&#x2F;&#x2F; x%10取最末位: 5  x&#x2F;10去除末位: 10
+&#x2F;&#x2F; x%10取最末位: 0  x&#x2F;10去除末位: 1
+&#x2F;&#x2F; x%10取最末位: 1  x&#x2F;10去除末位: 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="x2F-x2F-数字按顺序遍历"><a href="#x2F-x2F-数字按顺序遍历" class="headerlink" title="&#x2F;&#x2F;数字按顺序遍历"></a>&#x2F;&#x2F;数字按顺序遍历</h3><pre class="line-numbers language-none"><code class="language-none"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
       
