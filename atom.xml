@@ -6,7 +6,7 @@
   <link href="http://tiawnen42.top/atom.xml" rel="self"/>
   
   <link href="http://tiawnen42.top/"/>
-  <updated>2022-07-06T08:17:41.533Z</updated>
+  <updated>2022-07-06T08:22:06.400Z</updated>
   <id>http://tiawnen42.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>热爱生命</title>
+    <link href="http://tiawnen42.top/posts/fab5.html"/>
+    <id>http://tiawnen42.top/posts/fab5.html</id>
+    <published>2022-07-06T08:18:57.000Z</published>
+    <updated>2022-07-06T08:22:06.400Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="《热爱生命》——汪国真"><a href="#《热爱生命》——汪国真" class="headerlink" title="《热爱生命》——汪国真"></a>《热爱生命》——汪国真</h1><blockquote><p>我不去想，<br>是否能够成功 ，<br>既然选择了远方 ，<br>便只顾风雨兼程。<br>我不去想，<br>能否赢得爱情 ，<br>既然钟情于玫瑰 ，<br>就勇敢地吐露真诚 。<br>我不去想，<br>身后会不会袭来寒风冷雨 ，<br>既然目标是地平线，<br>留给世界的只能是背影 。<br>我不去想，<br>未来是平坦还是泥泞 ，<br>只要热爱生命 ，<br>一切，都在意料之中。</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;《热爱生命》——汪国真&quot;&gt;&lt;a href=&quot;#《热爱生命》——汪国真&quot; class=&quot;headerlink&quot; title=&quot;《热爱生命》——汪国真&quot;&gt;&lt;/a&gt;《热爱生命》——汪国真&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;我不去想，&lt;br&gt;是否能够成功 ，&lt;br&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>致Zhen</title>
@@ -544,31 +565,6 @@
     
     <category term="数据结构与算法" scheme="http://tiawnen42.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>力扣 2022-02-25</title>
-    <link href="http://tiawnen42.top/posts/9fe3.html"/>
-    <id>http://tiawnen42.top/posts/9fe3.html</id>
-    <published>2022-02-25T05:01:03.000Z</published>
-    <updated>2022-04-11T06:14:12.069Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="题目509-斐波那契数"><a href="#题目509-斐波那契数" class="headerlink" title="题目509.斐波那契数"></a>题目509.斐波那契数</h2><p>难度：简单</p><p><strong>斐波那契数</strong> （通常用 F(n) 表示）形成的序列称为 <strong>斐波那契数列</strong> 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：</p><pre class="line-numbers language-none"><code class="language-none">F(0) &#x3D; 0，F(1) &#x3D; 1F(n) &#x3D; F(n - 1) + F(n - 2)，其中 n &gt; 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>给定 n ，请计算 F(n) 。</p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n &#x3D; 2输出：1解释：F(2) &#x3D; F(1) + F(0) &#x3D; 1 + 0 &#x3D; 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n &#x3D; 3输出：2解释：F(3) &#x3D; F(2) + F(1) &#x3D; 1 + 1 &#x3D; 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>示例 3：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n &#x3D; 4输出：3解释：F(4) &#x3D; F(3) + F(2) &#x3D; 2 + 1 &#x3D; 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>0 &lt;&#x3D; n &lt;&#x3D; 30</li></ul><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/fibonacci-number/">https://leetcode-cn.com/problems/fibonacci-number/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#递归法</span><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword">return</span> <span class="token number">0</span>        <span class="token keyword">elif</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword">return</span> <span class="token number">1</span>        <span class="token keyword">else</span><span class="token punctuation">:</span><span class="token keyword">return</span> self<span class="token punctuation">.</span>fib<span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span>self<span class="token punctuation">.</span>fib<span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="http://cdn.tianwen42.top/picgo/image-20220225133243080.png" alt="image-20220225133243080"></p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#通项法</span><span class="token keyword">import</span> math<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token triple-quoted-string string">"""        :type N: int        :rtype: int        """</span>        sqrt5<span class="token operator">=</span>math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>        <span class="token keyword">return</span> <span class="token builtin">round</span><span class="token punctuation">(</span><span class="token builtin">pow</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span>sqrt5<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span>N<span class="token punctuation">)</span><span class="token operator">/</span>sqrt5<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;题目509-斐波那契数&quot;&gt;&lt;a href=&quot;#题目509-斐波那契数&quot; class=&quot;headerlink&quot; title=&quot;题目509.斐波那契数&quot;&gt;&lt;/a&gt;题目509.斐波那契数&lt;/h2&gt;&lt;p&gt;难度：简单&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;斐波那契数&lt;/strong</summary>
-      
-    
-    
-    
-    <category term="数据结构与算法" scheme="http://tiawnen42.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="斐波那契数列" scheme="http://tiawnen42.top/tags/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/"/>
     
   </entry>
   
